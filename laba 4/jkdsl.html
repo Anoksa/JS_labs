@@ -1,0 +1,191 @@
+<htm1>
+    <head>
+    </head>
+    <body>
+        <script>
+            function zad1() {
+document.write("<div align='center'>" + "<h3>Задание 1</h3>" + "<br>");
+    function Gruppa(n,spec,kolich) {
+        this.n=n;
+        this.spec=spec;
+        this.kolich=kolich;
+
+        this.add_stud=function add_stud(k) {
+            this.kolich+=k;
+            document.write('В группу ' + this.n + ' добавили '+ k + ' студентов.<br\>');
+        }
+        this.sub_stud=function sub_stud(f) {
+            this.kolich-=f;
+            document.write('В группе ' + this.n + ' исключили '+ f + ' студентов.<br\>');
+        }
+    }
+    gr1 = new Gruppa(1, 'ИСиТ', 30);
+    gr2 = new Gruppa(4, "ПОИТ", 30);
+    gr3 = new Gruppa(7, "ПОИБМС", 25);
+    gr4 = new Gruppa(9, "ДЭиВИ", 25);
+    
+    gr1.kurs=1;
+    gr2.kurs=1;
+    gr3.kurs=1;
+    gr4.kurs=1; 
+
+    document.write(gr1.n,"  ",gr1.spec,"  ", gr1.kolich,"  ", gr1.kurs, " </br> ");
+    document.write(gr2.n,"  ",gr2.spec,"  ", gr2.kolich,"  ", gr2.kurs, " </br> ");
+    document.write(gr3.n,"  ",gr3.spec,"  ", gr3.kolich,"  ", gr3.kurs, " </br> ");
+    document.write(gr4.n,"  ",gr4.spec,"  ", gr4.kolich,"  ", gr4.kurs, "</br>");
+    gr1.add_stud(1);
+    gr2.add_stud(2);
+    gr3.add_stud(3);
+    gr4.add_stud(4);
+    gr1.sub_stud(2);
+    gr2.sub_stud(4);
+    gr3.sub_stud(6);
+    gr4.sub_stud(8);
+
+    document.write(gr1.kolich + "<br>" + gr2.kolich + "<br>" + gr3.kolich + "<br>" +  gr4.kolich, '</br></br>');
+document.write("</div>");
+}
+
+function zad2()
+{
+    document.write("<div align='center'>" + "<h3>Задание 2</h3>" + "<br>");
+    function Student(name1,name2,a,b,c) {
+this.name1=name1;
+this.name2=name2;
+this.a=a;
+this.b=b;
+this.c=c;
+
+this.out=function out() {
+
+    document.write('Имя:  ', this.name1,'.', '  Фамилия:  ', this.name2, '</br>');
+}
+this.AverageMark=function AverageMark() {
+    var average = Math.floor((this.a+this.b+this.c)/3);
+    document.write('Средний балл:  ', average, '</br>');
+}
+}
+st1 = new Student('Кирилл', 'Сипайло', 4, 4, 5);
+st2 = new Student('Никита', 'Обровец', 5, 5, 6);
+st3 = new Student('Никита', 'Рубцов', 6, 6, 7);
+st4 = new Student('Илья', 'Шалов', 7, 7, 8);
+Student.prototype.kurs=this.kurs;
+st1.kurs=1;
+document.write(st1.name1, "  ", st1.name2,"  ",st1.kurs, "  ", st1.a, "  ", st1.b, "  ", st1.c, " </br> ");
+document.write(st2.name1, "  ", st2.name2, "  ", st2.a, "  ", st2.b, "  ", st2.c, " </br> ");
+document.write(st3.name1, "  ", st3.name2, "  ", st3.a, "  ", st3.b, "  ", st3.c, " </br> ");
+document.write(st4.name1, "  ", st4.name2, "  ", st4.a, "  ", st4.b, "  ", st4.c, " </br> ");
+st1.out();
+st2.out();
+st3.out();
+st2.out();
+st1.AverageMark();
+st2.AverageMark();
+st3.AverageMark();
+st4.AverageMark();
+    document.write("</div>" +"<br>");
+}
+
+
+function zad3(){
+    document.write("<div align='center'>" + "<h3>Задание 3</h3>" );
+    document.write("</br></br>")
+    function Gruppa(n,spec,kolich) {
+
+        this.n=n;
+        this.spec=spec;
+        this.kolich=kolich;
+
+        this.add_stud=function add_stud(k) {
+            this.kolich+=k;
+            document.write('В группу ' + this.n + ' добавили '+ k + ' студентов.<br\>');
+        }
+        this.sub_stud=function sub_stud(f) {
+            this.kolich-=f;
+            document.write('В группе ' + this.n + ' отняли '+ f + ' студентов.<br\>');
+        }
+    }
+    gr1 = new Gruppa(4, 'ПОИТ', 31);
+
+
+
+    function Student(name1,name2,a,b,c) {
+
+        this.name1=name1;
+        this.name2=name2;
+        this.a=a;
+        this.b=b;
+        this.c=c;
+
+        this.out=function out() {
+
+            document.write('Имя:  ', this.name1, '  Фамилия:  ', this.name2, '</br>');
+        }
+        this.AverageMark=function AverageMark() {
+            var average = Math.floor((this.a+this.b+this.c)/3);
+            document.write('Средний балл:  ', average, '</br>');
+        }
+    }
+    st1 = new Student('Илья', 'Шалов', 8, 9, 8);
+
+
+
+
+    var mas = new Array();
+    mas[0] = 6 * Math.pow(3.14, 2) + 3 * Math.exp(8);
+    mas[1] = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.exp(3);
+    mas[2] = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+    mas[3] = 2 * Math.tan(5) + 6 * 3.14 + Math.sqrt(12);
+
+    document.write(mas, "</br>");
+    delete mas[2];
+    document.write(mas,"</br>");
+    mas[2] = 123;
+    document.write(mas,"</br>");
+
+    var fio="Карпушевич";
+
+    if(1 in mas){
+        document.write("В первом массиве имеется 2-ой элемент","</br>");
+    }
+    if("n" in gr1){
+        document.write("В объекте gr1  имеется свойство n","</br>");
+    }
+    if("name1" in st1){
+        document.write("В объекте st1  имеется свойство name1","</br>");
+    }
+
+
+    if(mas instanceof Array){
+        document.write("values является массивом","</br>");
+    }else{
+        document.write("values не является массивом","</br>");
+    }
+
+    if(fio instanceof String){
+        document.write("fio является строкой","</br>");
+    }else{
+        document.write("fio не является строкой","</br>");
+    }
+    
+    if(Student instanceof Object){
+        document.write("Student является объектом","</br>");
+    }else{
+        document.write("Student не является объект","</br>");
+    }
+    function a()
+{
+	return 5;
+}
+document.write(typeof a() + "<br>");
+document.write(typeof mas + "<br>");
+document.write(typeof Student+ "<br>");
+document.write("</div>");
+}
+zad1();
+zad2();
+zad3();
+
+        </script>
+    </body>
+</htm1>

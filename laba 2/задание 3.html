@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+          
+body{
+    background-color: #d7a8e0;
+
+}
+table#table{
+    border: 1px solid black;
+}
+        </style> 
+    </head>
+    <body>
+            <script>
+           
+    document.write("<table border='1' align='center'>");
+    var i = 0, a = 1, b = 8;
+    do {
+        if (!i) {
+            document.write("<tr style='color: red; background-color: white;'>")
+            document.write("<td>" + 'Радиус' + "</td>");
+            document.write("<td>" + 'Площадь круга' + "</td>");
+            document.write("<td>" + 'Длина окружности' + "</td>");
+            document.write("</tr>"); i++;
+        }
+        document.write("<tr>")
+        document.write("<td style='background-color: white;'>" + (Math.floor(a * 10) / 10) + "</td>");
+        document.write("<td style='background-color: white;'>" + (Math.floor(Math.PI * a * a * 10) / 10) + "</td>");
+        document.write("<td style='background-color: white;'>" + (Math.floor(2 * Math.PI * a * 10) / 10) + "</td>");
+        document.write("</tr>");
+        a += 0.3;
+    } while (a <= b);
+    document.write("</table>");
+    </script>
+        
+   </body>
+</html>

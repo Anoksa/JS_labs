@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+        #g{
+            width: 200px;
+    height: 160px;
+    border: 2px solid red;
+        }
+        </style>
+
+<script>
+onload=function(){
+var obj1;
+obj1=document.getElementById("color");
+obj1.onmouseover=function(){
+    this.style.color="pink";
+}
+obj1.onmouseout=function(){
+    this.style.color="black";
+}
+var obj2;
+obj2=document.getElementById("size");
+obj2.onclick=function(){
+    this.style.fontSize="40px";
+}
+
+var obj3;
+obj3=document.getElementById("image");
+obj3.onclick=function(){
+if(obj3.src.indexOf("1.jpg")>0){
+    obj3.src="2.png";
+}
+else if(obj3.src.indexOf("2.png")>0){
+    obj3.src="3.png";
+} 
+else{
+obj3.src="1.jpg";
+}
+}
+var obj4;
+obj4=document.getElementById("change");
+obj4.onclick=function(){
+    obj4.innerHTML='<img width = "200" height = "160" id="change" src="g.png">';
+}
+var obj5;
+obj5=document.getElementById("uvel");
+obj5.onmouseover=function(){
+    obj5.style.width="500px";
+}
+obj5.onmouseout=function(){
+    obj5.style.width="200px";
+}
+var obj6;
+obj6=document.getElementById("click");
+obj6.ondblclick=function(){
+    this.style.border=" 2px dashed black";
+}
+}
+</script>
+    </head>
+    <body>
+<div align="center">
+<p id="color">Добрый день!</p>
+<p id="size">Всего доброго!</p>
+<div id="g"><img width = "200" height = "160" id="image" src="1.jpg"></div>
+<p id="change">bjsndcsmdc</p>
+<img width = "200" height = "160" id="uvel" src="2.png">
+<p id="click">dfghjk
+    ghbjnkfxgchv
+    fghvjbnk
+</p>
+</div>
+    </body>
+</html>

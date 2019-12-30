@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+            <img src="js-logo.png" width="200px" id='logo' style="position:absolute">
+            <script>
+                window.onload = function()
+                {
+                    var logo = document.getElementById('logo');
+                     logo.onclick = function()
+                      {
+                        let start = Date.now();
+                        let t = setInterval(function()
+      			{
+        			let timePassed = Date.now() - start;
+                    logo.style.left = 10 + timePassed;
+        			if (timePassed > 2000) 
+        				clearInterval(t);
+
+  				}, 30);                      
+                    }
+                }
+                
+            </script>
+    </body>
+</html>

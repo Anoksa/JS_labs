@@ -1,0 +1,75 @@
+<html>
+
+<head>
+        <meta charset="utf-8">
+    <style>
+        .table{
+            border-color: rgb(4, 190, 190);
+            border-collapse: inherit;
+        }
+        </style>
+    <script>
+function nov_okno() {
+
+var okno=window.open('','name' ,'_blank');
+okno.document.write("<input value='Закрыть окно' type=button onclick= 'window.close(); '>"
+    + "</br>");
+    okno.document.write("<input value=\"Имя окна\" type=button onclick= 'document.write(\"Первое окно\" + \"</br>\") '>"
+        + "</br>");
+}
+function zad2(){
+    document.write("</br>");
+    var col1 = ["всю информацию о браузере пользователя",
+    	"версия браузера",
+    	"название браузера",
+    	"кодовое название браузера",
+    	"ОС, которую использует пользователь",
+    	"включена ли поддержка Java в браузере",
+    	"ширина экрана",
+        "высота экрана",
+    	"глубину цвета",
+    	"URL, которые были посещены в данном окне браузера",
+    	"URL текущего документа",
+    	"путь к загруженному документу",
+    	"имя домена загруженного документа"
+];
+
+
+
+    var col2 = [navigator.userAgent,
+        navigator.appVersion,
+        navigator.appName,
+        navigator.appCodeName,
+        navigator.platform,
+        navigator.javaEnabled(),
+        screen.width,
+        screen.height,
+        screen.colorDepth,
+        history,
+        location.href,
+        location.pathname,
+        location.host
+    ];
+    document.write("<table border='1' class='table'>");
+    for(var i = 0; i < 13; i++) {
+        document.write("<tr>");
+        document.write("<td>" + col1[i] + "</td>");
+        document.write("<td>" + col2[i] + "</td>");
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    document.write("</br>");
+
+}
+zad2();
+        </script>
+</head>
+
+<body>
+
+<form>
+    <input type=button value="Открыть новое окно" onclick='nov_okno()'>
+</form>
+</body>
+
+</html>

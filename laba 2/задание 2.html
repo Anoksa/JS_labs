@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+          function tabl()
+          { var i, j;
+            var a=prompt("Введите число:", "Число");
+            var b=prompt("Введите число:", "Число");
+            document.write("<table border=\"1\" cellspacing=\"0\" cellpadding=\"2\" align=\"center\">")
+            for (i=1; i<=a; i++)
+            {
+                document.write("<tr style=' color: red; font-family: Tahoma;'>");
+                for( j=1; j<=b; j++)
+                {
+                    document.write("<td>" + j + "×" + i + "=" + (i * j) + "</td>")
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>")           
+          }
+        </script>
+    </head>
+    <body>
+<script>
+tabl();
+</script>
+    </body>
+</html>

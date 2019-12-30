@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function zad1()
+            {
+                alert("Вас приветствует учебный центр");
+                x=prompt("Введите ваше имя: ", 'Имя');
+                alert("Добро пожаловать на наши курсы, " + x);
+
+                if (confirm("Хотите стать Web-Дизайнером?"))
+                {alert("Учите стили CSS и JavaScript!");
+                } else{
+                alert("Упускаете время!");
+                }
+            }
+            function zad2()
+            {
+                var c = Number(10)+Number(15); //складываем числа
+                alert(c); //вывод результата
+                var str1="10";
+                var str2="5";
+                var str=str1+str2; //складываем строки
+                alert(str); //вывод результата
+                var number=22;
+                var str3="5";
+                var e=number+str3;//складываем число и строку
+                alert(e);
+                var number2=22;
+                var str4="5";
+                var t=str4+number2; //складываем строку и число
+                alert(t);
+                document.write("<p style='color: pink;'>" + "Результатом сложения строки и числа всегда будет строка."+ "</p>");
+            }
+            function zad3()
+            {
+                x=prompt("Введите первое число: ", "Число1");
+                y=prompt("Введите второе число:", "Число 2");
+                var number1=(35*Number(y)-25*Number(x))/5+232;
+                var number2=(8*Number(y)/Number(x)+5*Number(x)/Number(y)-43)*6;
+                alert( number1);
+                alert(number2);
+                var c=number1/number2;
+                alert(c);
+            }
+            function zad4()
+            {
+                x=prompt("Введите число", "Число")*1;
+                if(x<20||x>40&&x!=15&&x%5==0)
+                {
+                alert("Правильное значение");
+                }
+                else{
+                alert("Неправильное значение");
+                }
+            }
+            function zad5()
+            {
+                A=prompt("Введите первое число", "Число A")*1;
+                B=prompt("Введите второе число", "Число B")*1;
+
+                if (A<B) {
+                alert( "А меньше В" );
+                } else if (A>B) {
+                alert( "А больше В" );
+                } else {
+                alert( "Числа равны" );
+                }
+
+                A=prompt("Введите первое число", "Число A")*1;
+                B=prompt("Введите второе число", "Число B")*1;
+                if (A<B)
+                {
+                alert("А меньше В");
+                }
+                else(A>B)?alert("А больше В"):alert("Числа равны");
+            }
+            function zad6()
+            {
+                var x=prompt("Введите номер дня", "1-7");
+                switch(x)
+                {
+                case "1": document.write("<p style='color: red; font-size: 100px; font-family: Arial;'>Понедельник</p>"); break; //цифры в кавычках, т.к. prompt считывает на цифры, а символы
+                case "2": alert("Вторник"); break;
+                case "3": alert("Среда"); break;
+                case "4": alert("Четверг"); break;
+                case "5": alert("Пятница"); break;
+                case "6": document.write("<p style='color: red; font-size: 100px; font-family: Times New Roman;'>Суббота</p>"); break;
+                case "7": alert("Воскресенье"); break;
+                default: alert( 'Я таких значений не знаю' ); break;
+                }
+            }
+            function zad7(){
+                try {
+                alert('Здравствуйте')
+                lalala;
+                } 
+                catch(e) 
+                {
+                    alert('Ошибка\n ' + e.message);
+
+                }
+            }
+        </script>
+        <style>
+            .button{
+                color: rgb(147, 59, 219);
+                margin-left: 650px;
+                margin-top: 25px;
+            }
+        </style>
+    </head>
+    <body>
+<input class="button" type="button" value="Задание 1" onclick='zad1()' />
+<br>
+<input class="button" type="button" value="Задание 2" onclick='zad2()' />
+<br>
+<input class="button" type="button" value="Задание 3" onclick='zad3()' />
+<br>
+<input class="button" type="button" value="Задание 4" onclick='zad4()' />
+<br>
+<input class="button" type="button" value="Задание 5" onclick='zad5()' />
+<br>
+<input class="button" type="button" value="Задание 6" onclick='zad6()' />
+<br>
+<input class="button" type="button" value="Задание 7" onclick="zad7()" />
+    </body>
+</html>

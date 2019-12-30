@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            document.write("<link rel=stylesheet type=text/css href=''/>");
+    x = new Number(2.5);
+    y = new Number(124);
+    document.write("<table class=t3 border='1'>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: grey;'>" + 'Число' + "</td>");
+    document.write("<td style='background-color: grey;'>" + 'Метод' + "</td>");
+    document.write("<td style='background-color: grey;'>" + 'Результат' + "</td>");
+    document.write("<td style='background-color: grey;'>" + 'Описание метода' + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: blue; color: white;'>" + x + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + "toExponential" + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + x.toExponential(3)+"</td>");
+    document.write("<td style='background-color: blue; color: white;'>"+"Представляет число в экспоненциальной форме" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: blue; color: white;'>" + y + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + "toExponential" + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + y.toExponential(2)+"</td>");
+    document.write("<td style='background-color: blue; color: white;'>"+"Представляет число в экспоненциальной форме" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: blue; color: white;'>" + x + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + "toFixed" + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + x.toFixed(3)+"</td>");
+    document.write("<td style='background-color: blue; color: white;'>"+"Представляет число в форме с фиксированным количеством цифр по-сле точки" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: blue; color: white;'>" + y + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + "toFixed" + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + y.toFixed(3)+"</td>");
+    document.write("<td style='background-color: blue; color: white;'>"+"Представляет число в форме с фиксированным количеством цифр по-сле точки" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: blue; color: white;'>" + x + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + "toPrecision" + "</td>");
+    document.write("<td style='background-color: blue; color: white;'>" + x.toPrecision(3)+"</td>");
+    document.write("<td style='background-color: blue; color: white;'>"+"Представляет число с заданным общим количеством значащих цифр" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: yellow;'>" + y + "</td>");
+    document.write("<td style='background-color: yellow;'>" + "toPrecision" + "</td>");
+    document.write("<td style='background-color: yellow;'>" + y.toPrecision(3)+"</td>");
+    document.write("<td style='background-color: yellow;'>"+"Представляет число с заданным общим количеством значащих цифр" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: yellow;'>" + x + "</td>");
+    document.write("<td style='background-color: yellow;'>" + "toString(16)" + "</td>");
+    document.write("<td style='background-color: yellow;'>" + x.toString(16)+"</td>");
+    document.write("<td style='background-color: yellow;'>"+"Строковое представление числа в 16-ричной системе счисления" + "</td>");
+    document.write("</tr>");
+
+    document.write("<tr>");
+    document.write("<td style='background-color: yellow;'>" + y + "</td>");
+    document.write("<td style='background-color: yellow;'>" + "toString(16)" + "</td>");
+    document.write("<td style='background-color: yellow;'>" + y.toString(16)+"</td>");
+    document.write("<td style='background-color: yellow;'>"+"Строковое представление числа в 16-ричной системе счисления" + "</td>");
+    document.write("</tr>");
+            </script>
+    </body>
+</html>

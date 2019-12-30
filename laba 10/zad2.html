@@ -1,0 +1,39 @@
+<html>
+    <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <style>
+         div{
+        position:absolute;
+    } 
+    img{
+        width: 150px;
+        position:absolute;
+    }
+   #logo2{
+    margin-top:170; 
+   }
+    </style>
+    </head>
+    <body>
+        <img id="logo1" src="js-logo.png">
+        <img id="logo2" src="js-logo.png">
+        <img id="logo3" style="position:absolute; top:10; right:250;" src="js-logo.png">
+        <script>
+                $(document).ready(function(){
+                    $("#logo1").click(function(){    
+                    $('#logo1').animate({left: "+="+750}, 2000);});
+                    $("#logo2").click(function(){
+                    $('#logo2').animate({left: "+="+400}, 2000);
+                    $('#logo2').animate({top: "+="+400}, 2000);
+                    $('#logo2').animate({top: "-="+400}, 2000);
+                    $('#logo2').animate({left: "-="+400}, 2000);
+                     });
+                     $( function() {
+                    $( "#logo3" ).draggable();
+                    } );
+          });
+            </script>
+    </body>
+   
+</html>

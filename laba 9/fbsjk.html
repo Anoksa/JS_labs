@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Перемещение изображения</title>
+</head>
+<body>
+  <img src="js-logo.png" id="js" width="300px" style="position: absolute">
+  <div id="text">Перетащи меня</div>
+
+  <script>
+    var logo = document.getElementById('js');
+   
+    /*Событие onmousedown по своему действию похоже на onclick и отличается от него тем, что срабатывает в момент нажатия на кнопку мыши.*/
+    logo.onmousedown = function(e) 
+    {
+      move(e);
+
+    function move(e) 
+    { /*Свойство event.pageX содержит в себе расстояние от левой границы документа до курсора с учетом прокрутки.*/
+      /*Свойство offsetWidth содержит полную ширину элемента*/
+      logo.style.left = e.pageX - logo.offsetWidth / 2 + 'px';
+      logo.style.top = e.pageY - logo.offsetHeight / 2 + 'px';
+    }
+/*Событие onmousemove используется для определения перемещения курсора мыши в любом направлении экрана. */
+    document.onmousemove = function(e) 
+    {
+        move(e);
+    }
+/*Событие onmouseup по своему действию противоположно событию onmousedown и происходит при отпускании кнопки мыши, пока курсор находится в пределах элемента, к которому добавлен атрибут onmouseup.*/
+      logo.onmouseup = function() 
+      {
+        document.onmousemove = null;
+        logo.onmouseup = null;
+      }
+};
+   
+    var text = document.getElementById("text");
+    text.style.position = 'absolute';
+    text.onmousedown = function(e) {
+
+        document.body.appendChild(text);
+        text.style.zIndex = 1000;
+
+        function moving(e) {
+            text.style.left = e.pageX - text.offsetWidth / 2 + 'px';
+            text.style.top = e.pageY - text.offsetHeight / 2 + 'px';
+        }
+        document.onmousemove = function(e) {
+            moving(e);
+        }
+        text.onmouseup = function() {
+            document.onmousemove = null;
+            text.onmouseup = null;
+        }
+    };
+</script>
+</body>
+</html>

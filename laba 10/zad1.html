@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+        div{
+            text-align: center;
+        }
+        img{
+            width: 200px;
+            height: 160px;
+        }
+        </style>
+        <script type="text/javascript" src="jquery.js"></script>
+    </head>
+    <body>
+        <div>
+        <br>
+        <p  id="color">Hello</p>
+        <br>
+        <p  id="size"> Увеличение по клику</p>
+        <br>
+        <img id="img1" src="1.jpg">
+        <br>
+        <p id="text1"> Замена</p>
+        <br>
+        <img src="2.png" id="img2" >
+        <br>
+        <p id="border">Рамка</p>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#color").mouseover(function(){$("#color").css("color","pink")});
+                $("#color").mouseout(function(){$("#color").css("color","black")});
+
+                $("#size").click(function(){$(this ).css("font-size","30px");});
+
+                $("#img1").click(function(){ $(this).attr('src','2.jpg').css("width", "350px").css("height", "250px")});
+
+                $("#img1").dblclick(function(){$(this).attr('src', '1.jpg').css("width", "250").css("height", "160")})
+
+                $("#text1").click(function(){$(this).html('<img src="3.png" width = "200" />')});
+
+                $("#img2").mouseover(function(){$(this).slideUp(3000)});
+                $("#img2").mouseout(function(){$(this).slideDown(3000)});
+
+                $("#border").dblclick(function(){$(this).css("border","double").css("border-color", "pink")});
+                });
+
+             </script>   
+
+    </body>
+</html>
